@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BCAInternshipApp</string>
+    <string name="price_symbol">$</string>
 </resources>
