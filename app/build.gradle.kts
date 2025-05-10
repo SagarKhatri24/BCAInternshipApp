@@ -46,6 +46,9 @@ dependencies {
     //Responsive UI
     implementation(libs.sdp)
 
+    //Razorpay Payment Gateway
+    implementation(libs.razorpay)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

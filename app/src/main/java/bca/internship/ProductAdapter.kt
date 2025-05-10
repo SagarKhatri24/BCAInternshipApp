@@ -1,6 +1,8 @@
 package bca.internship
 
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +43,19 @@ class ProductAdapter(
         holder.productPrice.setText(context.resources.getString(R.string.price_symbol)+productPriceArray[position])
 
         holder.productImage.setImageResource(productImageArray[position])
+
+        holder.itemView.setOnClickListener {
+            var intent : Intent = Intent(context,ProductDetailActivity::class.java)
+            var bundle : Bundle = Bundle()
+            bundle.putString("NAME",productNameArray[position])
+            bundle.putString("DESCRIPTION",productDescArray[position])
+            bundle.putString("PRICE",productPriceArray[position])
+
+            bundle.putInt("IMAGE", productImageArray[position])
+
+            intent.putExtras(bundle)
+            context.startActivity(intent)
+        }
 
     }
 
